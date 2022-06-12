@@ -1,0 +1,94 @@
+@import "../node_modules/reset-css/reset.css";
+@import "./variables.scss";
+@import "./fonts.scss";
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.header__inner {
+  display: flex;
+  justify-content: center;
+}
+.header {
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  margin-bottom: 10%;
+  background-color: $green;
+  max-height: 72px;
+  box-shadow: 1px 1px 1px $gray;
+  &__nav {
+    display: flex;
+    align-items: center;
+    width: 720px;
+    gap: 15px;
+    text-decoration: none;
+    font-family: Inter;
+    &-menu {
+      gap: 15px;
+      display: flex;
+      text-decoration: none;
+      &-item {
+        a {
+          transition: all ease-in-out 0.2s;
+          color: $white;
+          text-decoration: none;
+          text-transform: uppercase;
+          &:hover {
+            color: #ffd700;
+          }
+        }
+      }
+    }
+  }
+}
+.about {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  &__background {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/img/фон.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      
+      z-index: 1;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-image: url("/img/фон.svg");
+    }
+
+    &-blur {
+      backdrop-filter: blur(8px);
+      height: 100vh;
+      width: 100%;
+      position: relative;
+    }
+  }
+  &__img {
+  }
+  &__food {
+    &-text {
+      /* position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); */
+    }
+  }
+}
